@@ -5,34 +5,35 @@ AWS.config.update({region:'eu-west-1'});
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-exports.get = (event, context, callback) => {
-  const data = event.queryStringParameters;
+exports.post = (event, context, callback) => {
+  const data = JSON.parse(event.body);
 
   const params = {
-    TableName: 'KengaMagjike2019',
-    Key: {
+    TableName: 'KM2019-Artist',
+    Item: {
       Artist: data.Artist,
-      SongTitle: data.SongTitle
+      SongTitle: data.SongTitle,
+      AlbumTitle: data.AlbumTitle,
+      CriticRating: data.CriticRating,
+      Genre: data.Genre,
+      Price: data.Price
     },
-  }
-  
-  // fetch item from DynamoDB
-  dynamoDb.get(params, (error, result) => {
-    // handle potential errors
+  };
+
+  dynamoDb.put(params, (error) => {
     if (error) {
       console.error(error);
       callback(null, {
         statusCode: error.statusCode || 501,
         headers: { 'Content-Type': 'text/plain' },
-        body: 'Couldn\'t get the item.',
+        body: 'Couldn\'t post the item.',
       });
       return;
     }
 
-    // create a response
     const response = {
       statusCode: 200,
-      body: JSON.stringify(result),
+      body: JSON.stringify(params.Item),
     };
     callback(null, response);
   });

@@ -6,29 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "get list 100 artists",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/km2019",
-					"protocol": "https",
-					"host": [
-						"fw9cy4j1y6",
-						"execute-api",
-						"eu-west-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"Dev",
-						"km2019"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "post artist",
 			"request": {
 				"method": "POST",
@@ -45,7 +22,7 @@
 					"raw": "{\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What\"\r\n}"
 				},
 				"url": {
-					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/km2019",
+					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist",
 					"protocol": "https",
 					"host": [
 						"fw9cy4j1y6",
@@ -56,30 +33,19 @@
 					],
 					"path": [
 						"Dev",
-						"km2019"
+						"artist"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "update artist",
+			"name": "get list 100 artists",
 			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What2\"\r\n}"
-				},
+				"method": "GET",
+				"header": [],
 				"url": {
-					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/km2019/id",
+					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist",
 					"protocol": "https",
 					"host": [
 						"fw9cy4j1y6",
@@ -90,43 +56,7 @@
 					],
 					"path": [
 						"Dev",
-						"km2019",
-						"id"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "delete artists",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"Artist\": \"Eminem\",\r\n    \"SongTitle\": \"What2\"\r\n}"
-				},
-				"url": {
-					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/km2019/id",
-					"protocol": "https",
-					"host": [
-						"fw9cy4j1y6",
-						"execute-api",
-						"eu-west-1",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"Dev",
-						"km2019",
-						"id"
+						"artist"
 					]
 				}
 			},
@@ -152,7 +82,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/km2019/id?Artist=Eminem&SongTitle=What%27s%20my%20name",
+					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id?Artist=Eminem&SongTitle=What%27s%20my%20name",
 					"protocol": "https",
 					"host": [
 						"fw9cy4j1y6",
@@ -163,7 +93,7 @@
 					],
 					"path": [
 						"Dev",
-						"km2019",
+						"artist",
 						"id"
 					],
 					"query": [
@@ -175,6 +105,76 @@
 							"key": "SongTitle",
 							"value": "What%27s%20my%20name"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update artist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What2\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id",
+					"protocol": "https",
+					"host": [
+						"fw9cy4j1y6",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Dev",
+						"artist",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete artists",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Artist\": \"Eminem\",\r\n    \"SongTitle\": \"What2\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id",
+					"protocol": "https",
+					"host": [
+						"fw9cy4j1y6",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Dev",
+						"artist",
+						"id"
 					]
 				}
 			},

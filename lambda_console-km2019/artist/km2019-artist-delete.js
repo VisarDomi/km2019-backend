@@ -5,27 +5,28 @@ AWS.config.update({region:'eu-west-1'});
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-exports.list = (event, context, callback) => {
+exports.delete = (event, context, callback) => {
+  const data = JSON.parse(event.body);
 
   const params = {
-    TableName: 'KengaMagjike2019',
-    Limit: 100
+    TableName: 'KM2019-Artist',
+    Key: {
+      Artist: data.Artist,
+      SongTitle: data.SongTitle
+    },
   }
-  
-  // fetch item from DynamoDB
-  dynamoDb.scan(params, (error, result) => {
-    // handle potential errors
+
+  dynamoDb.delete(params, (error, result) => {
     if (error) {
       console.error(error);
       callback(null, {
         statusCode: error.statusCode || 501,
         headers: { 'Content-Type': 'text/plain' },
-        body: 'Couldn\'t fetch the items.',
+        body: 'Couldn\'t delete the item.',
       });
       return;
     }
 
-    // create a response
     const response = {
       statusCode: 200,
       body: JSON.stringify(result),
