@@ -1,3 +1,6 @@
 {
   "body": "{\"Artist\":\"TestArtist\",\"SongTitle\":\"Test Song\",\"AlbumTitle\":\"TestAlbum\",\"CriticRating\":\"8.9\",\"Genre\":\"Classical\",\"Price\":\"1.99\"}"
 }
+{
+  "body": "{\"Title\":\"My first blog\",\"Text\":\"Here it is.\",\"Date\":\"2019-08-30\"}"
+}
