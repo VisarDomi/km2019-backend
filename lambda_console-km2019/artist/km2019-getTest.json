@@ -1,0 +1,24 @@
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Artist",
+    "id": "ac74e06c-68cc-4bfb-a898-13f26156d822"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Blog",
+    "id": "ac74e06c-68cc-4bfb-a898-13f26156d822"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Submission",
+    "id": "ac74e06c-68cc-4bfb-a898-13f26156d822"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Vote",
+    "id": "ac74e06c-68cc-4bfb-a898-13f26156d822"
+  }
+}

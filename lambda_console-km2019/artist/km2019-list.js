@@ -6,7 +6,7 @@ AWS.config.update({ region: "eu-west-1" });
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 exports.list = (event, context, callback) => {
-  const TableName = process.env.TABLENAME;
+  const TableName = event.queryStringParameters.TableName;
   const Limit = 100;
   const params = { TableName, Limit };
 

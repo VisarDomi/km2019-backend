@@ -1,0 +1,12 @@
+{
+  "body": "{\"TableName\":\"KM2019-Artist\",\"Artist\":\"TestArtist\",\"SongTitle\":\"Test Song\",\"AlbumTitle\":\"TestAlbum\",\"CriticRating\":\"8.9\",\"Genre\":\"Classical\",\"Price\":\"1.99\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Blog\",\"Title\":\"My first blog\",\"Text\":\"Here it is.\",\"Date\":\"2019-08-30\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Submission\",\"Name\":\"My name\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Vote\",\"ArtistName\":\"The artist's name\"}"
+}

@@ -22,10 +22,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What's that?\"\r\n}"
+							"raw": "{\r\n\t\"TableName\": \"KM2019-Artist\",\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What's that?\"\r\n}"
 						},
 						"url": {
-							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist",
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api",
 							"protocol": "https",
 							"host": [
 								"fw9cy4j1y6",
@@ -36,7 +36,7 @@
 							],
 							"path": [
 								"Dev",
-								"artist"
+								"api"
 							]
 						}
 					},
@@ -48,7 +48,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist",
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api?TableName=KM2019-Artist",
 							"protocol": "https",
 							"host": [
 								"fw9cy4j1y6",
@@ -59,14 +59,20 @@
 							],
 							"path": [
 								"Dev",
-								"artist"
+								"api"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Artist"
+								}
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "get artist by query2",
+					"name": "get artist by query",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -85,7 +91,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id?id=d96e7e16-48ad-4c97-a256-9511bc10777e",
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id?TableName=KM2019-Artist&id=43daeeea-bf56-4ca3-be3f-5e341490400f",
 							"protocol": "https",
 							"host": [
 								"fw9cy4j1y6",
@@ -96,13 +102,17 @@
 							],
 							"path": [
 								"Dev",
-								"artist",
+								"api",
 								"id"
 							],
 							"query": [
 								{
+									"key": "TableName",
+									"value": "KM2019-Artist"
+								},
+								{
 									"key": "id",
-									"value": "d96e7e16-48ad-4c97-a256-9511bc10777e"
+									"value": "43daeeea-bf56-4ca3-be3f-5e341490400f"
 								}
 							]
 						}
@@ -123,10 +133,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"id\": \"d96e7e16-48ad-4c97-a256-9511bc10777e\",\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What2\"\r\n}"
+							"raw": "{\r\n\t\"id\": \"43daeeea-bf56-4ca3-be3f-5e341490400f\",\r\n\t\"TableName\": \"KM2019-Artist\",\r\n    \"Price\": \"3.89\",\r\n    \"CriticRating\": \"4.66\",\r\n    \"AlbumTitle\": \"Slim Shady\",\r\n    \"Artist\": \"Eminem\",\r\n    \"Genre\": \"Rap\",\r\n    \"SongTitle\": \"What2\"\r\n}"
 						},
 						"url": {
-							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id",
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
 							"protocol": "https",
 							"host": [
 								"fw9cy4j1y6",
@@ -137,7 +147,7 @@
 							],
 							"path": [
 								"Dev",
-								"artist",
+								"api",
 								"id"
 							]
 						}
@@ -145,7 +155,7 @@
 					"response": []
 				},
 				{
-					"name": "delete artists",
+					"name": "delete artist",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -158,10 +168,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"d96e7e16-48ad-4c97-a256-9511bc10777e\"\r\n}"
+							"raw": "{\r\n    \"id\": \"43daeeea-bf56-4ca3-be3f-5e341490400f\",\r\n    \"TableName\": \"KM2019-Artist\"\r\n}"
 						},
 						"url": {
-							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/artist/id",
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
 							"protocol": "https",
 							"host": [
 								"fw9cy4j1y6",
@@ -172,7 +182,7 @@
 							],
 							"path": [
 								"Dev",
-								"artist",
+								"api",
 								"id"
 							]
 						}
@@ -183,15 +193,561 @@
 		},
 		{
 			"name": "blog",
-			"item": []
+			"item": [
+				{
+					"name": "post blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"TableName\": \"KM2019-Blog\",\r\n    \"Date\": \"2019-08-30\",\r\n    \"Title\": \"What's this?\",\r\n    \"Text\": \"Gimme textes\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list 100 blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api?TableName=KM2019-Blog",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Blog"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get blog by query",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id?TableName=KM2019-Blog&id=36224025-b21c-4646-9716-2e2e99dbbcf4",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Blog"
+								},
+								{
+									"key": "id",
+									"value": "36224025-b21c-4646-9716-2e2e99dbbcf4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update blog",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"36224025-b21c-4646-9716-2e2e99dbbcf4\",\r\n\t\"TableName\": \"KM2019-Blog\",\r\n    \"Date\": \"2019-08-30\",\r\n    \"Title\": \"What's this? modified\",\r\n    \"Text\": \"Gimme textes\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"36224025-b21c-4646-9716-2e2e99dbbcf4\",\r\n    \"TableName\": \"KM2019-Blog\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "submission",
-			"item": []
+			"item": [
+				{
+					"name": "post submission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"TableName\": \"KM2019-Submission\",\r\n    \"Name\": \"My name\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list 100 submissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api?TableName=KM2019-Submission",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Submission"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get submission by query",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id?TableName=KM2019-Submission&id=5eb81d66-51e6-42d5-b34b-83a16be4d939",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Submission"
+								},
+								{
+									"key": "id",
+									"value": "5eb81d66-51e6-42d5-b34b-83a16be4d939"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update submission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"5eb81d66-51e6-42d5-b34b-83a16be4d939\",\r\n\t\"TableName\": \"KM2019-Submission\",\r\n    \"Name\": \"My changed name\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete submission",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"5eb81d66-51e6-42d5-b34b-83a16be4d939\",\r\n    \"TableName\": \"KM2019-Submission\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "votes",
-			"item": []
+			"name": "vote",
+			"item": [
+				{
+					"name": "post vote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"TableName\": \"KM2019-Vote\",\r\n    \"Artist\": \"The Artist's Name\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list 100 votes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api?TableName=KM2019-Vote",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Vote"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vote by query",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id?TableName=KM2019-Vote&id=a4b2ab9a-73d7-4f7e-8d6b-e0a48fd170bb",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							],
+							"query": [
+								{
+									"key": "TableName",
+									"value": "KM2019-Vote"
+								},
+								{
+									"key": "id",
+									"value": "a4b2ab9a-73d7-4f7e-8d6b-e0a48fd170bb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"a4b2ab9a-73d7-4f7e-8d6b-e0a48fd170bb\",\r\n\t\"TableName\": \"KM2019-Vote\",\r\n    \"Artist\": \"Artist's Name modified\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete vote",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"a4b2ab9a-73d7-4f7e-8d6b-e0a48fd170bb\",\r\n    \"TableName\": \"KM2019-Vote\"\r\n}"
+						},
+						"url": {
+							"raw": "https://fw9cy4j1y6.execute-api.eu-west-1.amazonaws.com/Dev/api/id",
+							"protocol": "https",
+							"host": [
+								"fw9cy4j1y6",
+								"execute-api",
+								"eu-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Dev",
+								"api",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

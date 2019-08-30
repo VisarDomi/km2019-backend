@@ -1,0 +1,12 @@
+{
+  "body": "{\"TableName\":\"KM2019-Artist\",\"id\":\"ac74e06c-68cc-4bfb-a898-13f26156d822\",\"Artist\":\"TestArtist\",\"SongTitle\":\"Test Song\",\"AlbumTitle\":\"TestAlbum\",\"CriticRating\":\"8.9\",\"Genre\":\"Classical\",\"Price\":\"3.99\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Blog\",\"id\":\"112edb55-056d-44d3-9ff5-a7cf134a7fb1\",\"Title\":\"My first blog2\",\"Text\":\"Here it is.\",\"Date\":\"2019-08-30\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Submission\",\"id\":\"112edb55-056d-44d3-9ff5-a7cf134a7fb1\",\"Name\":\"My name\"}"
+}
+{
+  "body": "{\"TableName\":\"KM2019-Vote\",\"id\":\"112edb55-056d-44d3-9ff5-a7cf134a7fb1\",\"ArtistName\":\"The artist's name\"}"
+}
