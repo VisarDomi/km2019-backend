@@ -17,7 +17,6 @@ exports.delete = (event, context, callback) => {
 
   dynamoDb.delete(params, (error, result) => {
     if (error) {
-      console.error(error);
       callback(null, {
         statusCode: error.statusCode || 501,
         headers: { "Content-Type": "text/plain" },
@@ -27,8 +26,7 @@ exports.delete = (event, context, callback) => {
     }
 
     const response = {
-      statusCode: 200,
-      body: JSON.stringify(result)
+      statusCode: 200
     };
     callback(null, response);
   });

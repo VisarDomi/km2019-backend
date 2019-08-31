@@ -1,0 +1,24 @@
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Artist",
+    "Limit": "100"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Blog",
+    "Limit": "100"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Submission",
+    "Limit": "100"
+  }
+}
+{
+  "queryStringParameters": {
+    "TableName": "KM2019-Vote",
+    "Limit": "100"
+  }
+}
