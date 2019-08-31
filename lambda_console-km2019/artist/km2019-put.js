@@ -6,8 +6,6 @@ AWS.config.update({ region: "eu-west-1" });
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-exports.put = (event, context, callback) => {
-  shared.deleteDynamoDb(event, callback, dynamoDb);
-  shared.sleep(1000);
-  shared.postDynamoDb(event, callback, dynamoDb);
+exports.put = async (event, context, callback) => {
+  await shared.postDynamoDb(event, callback, dynamoDb);
 };
