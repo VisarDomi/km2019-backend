@@ -18,7 +18,11 @@ exports.get = (event, context, callback) => {
         console.log(error);
         callback(null, {
           statusCode: error.statusCode || 501,
-          headers: { "Content-Type": "txt/plain" },
+          headers: {
+            'Content-Type': 'plain/txt',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          },
           body: "Couldn't fetch the items."
         });
         return;
@@ -26,32 +30,52 @@ exports.get = (event, context, callback) => {
 
       const response = {
         statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET'
+        },
         body: JSON.stringify(result)
       };
       callback(null, response);
     });
-  } else {
+  }
+  else {
     params = { TableName, Key: { id } };
     dynamoDb.get(params, (error, result) => {
       if (error) {
         console.log(error);
         callback(null, {
           statusCode: error.statusCode || 501,
-          headers: { "Content-Type": "text/plain" },
+          headers: {
+            'Content-Type': 'plain/txt',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          },
           body: "Couldn't fetch the items."
         });
         return;
       }
       if (Object.keys(result).length === 0) {
         const response = {
-        statusCode: 404,
-        headers: { "Content-Type": "text/plain" },
-        body: "Item with that id does not exist"
+          statusCode: 404,
+          headers: {
+            'Content-Type': 'plain/txt',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          },
+          body: "Item with that id does not exist"
         };
         callback(null, response);
-      } else {
+      }
+      else {
         const response = {
           statusCode: 200,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET'
+          },
           body: JSON.stringify(result)
         };
         callback(null, response);

@@ -19,15 +19,24 @@ exports.delete = (event, context, callback) => {
     if (error) {
       callback(null, {
         statusCode: error.statusCode || 501,
-        headers: { "Content-Type": "text/plain" },
+        headers: {
+          "Content-Type": "plain/txt",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "DELETE"
+        },
         body: "Couldn't delete the item."
       });
       return;
     }
 
     const response = {
-      statusCode: 200
-    };
+      statusCode: 200,
+      headers: {
+        "Content-Type": "plain/txt",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "DELETE"
+      },
+  };
     callback(null, response);
   });
 };

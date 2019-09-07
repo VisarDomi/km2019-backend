@@ -23,7 +23,11 @@ exports.put = (event, context, callback) => {
       console.log(error);
       callback(null, {
         statusCode: error.statusCode || 501,
-        headers: { "Content-Type": "text/plain" },
+        headers: {
+          "Content-Type": "plain/txt",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "PUT"
+        },
         body: "Couldn't post the item."
       });
       return;
@@ -31,6 +35,11 @@ exports.put = (event, context, callback) => {
 
     const response = {
       statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "PUT"
+      },
       body: JSON.stringify(params.Item)
     };
     callback(null, response);
