@@ -1,0 +1,1 @@
+A CRUD exercise using AWS Lambda with AWS DynamoDB as a database. This is inspired by a real project delivered to a client who falls under an NDA. These scripts are in no way related or associated to a real project, used for demonstration purposes only.
